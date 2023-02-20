@@ -28,11 +28,11 @@ public class Transaction {  // OneToMany relationship with book and card
 
     @ManyToOne
     @JoinColumn
-    Book book;
+    private Book book;
 
     @ManyToOne
     @JoinColumn
-    Card card;
+    private Card card;
 
     public Transaction() {
     }
@@ -83,5 +83,21 @@ public class Transaction {  // OneToMany relationship with book and card
 
     public void setIssue(boolean issue) {
         isIssue = issue;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public Card getCard() {
+        return card;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
     }
 }
